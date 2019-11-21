@@ -9,7 +9,7 @@ class MovieCard extends React.Component {
     componentDidMount() {
         axios
         .get(
-            `https://api.themoviedb.org/3/search/movie/id=${
+            `https://api.themoviedb.org/3/movie/${
                 this.props.movieID
             }?api_key=3f918e326ee690eb0323fa8230f8c49a&plot=full`
         )
@@ -39,7 +39,8 @@ class MovieCard extends React.Component {
     <tbody >
         <tr>
         <td>
-            <img alt="poster" width="250" height="300"src={poster_path}/>
+             
+            <img alt="poster" width="250" height="300"src= {`https://image.tmdb.org/t/p/w185${poster_path}`}/>
         </td>
         <td>
             <h2>{title}</h2>

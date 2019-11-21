@@ -20,16 +20,17 @@ class MoviesList extends React.Component {
         .then(res => res.data.results)
         //console.log(res.data.results[0])
         .then(res => {
+            
             console.log(res)
             
-            if (!res.Search) {
+            if (!res) {
                 this.setState({ moviesList: [ ] });
                 console.log(this.state.moviesList)
                 return;
             }
             
             console.log("hello")
-            const moviesList = res.Search.map(movie => movie.id);
+            const moviesList = res.map(movie => movie.id);
             this.setState({
                 moviesList
                 
