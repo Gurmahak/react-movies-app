@@ -6,23 +6,19 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TvRows from './TvRow';
 
-
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
-    width:'2in',
-    
-    
+    width:'2in', 
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
-  
   },
 }));
 
- function Category1() {
-   var value;
+  function Category1() {
+  var value;
   const classes = useStyles();
   const [Category, setValue] = React.useState('');
 
@@ -42,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     
   }else if(Category === "top_rated"){
     value = <TvRows options = {"top_rated"}/>
-     
+    
   }else if(Category === "on_the_air"){
     value = <TvRows options = {"on_the_air"}/>
     
@@ -65,9 +61,7 @@ const useStyles = makeStyles(theme => ({
         labelWidth={labelWidth}
         
       >
-        {/* <MenuItem value="">
-          <em></em>
-        </MenuItem> */}
+        
         <MenuItem value='airing_today'>Airing Today</MenuItem>
         <MenuItem value='on_the_air'>On The Air</MenuItem>
         <MenuItem value='popular'>Popular</MenuItem>
@@ -76,8 +70,7 @@ const useStyles = makeStyles(theme => ({
       
     </FormControl>
     {value}
-     </div> 
-    
+    </div> 
   )
-  
+    
 }export default Category1

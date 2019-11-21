@@ -11,13 +11,11 @@ class MovieRows extends Component{
     myoption = props.options
     this.state= {}
     this.performSearch()
-    
     }
+
     performSearch = async (movies) => {
     try {
     const url= movieUrl + myoption
-    
-    
     const response = await axios.get(url, {
     params: {
     api_key: api_key,
@@ -31,8 +29,6 @@ class MovieRows extends Component{
     
     const moviesRow = <MovieRow key={movies.id} movies={movies} />
     movieRows.push(moviesRow)
-    
-    
     })
     this.setState({rows:movieRows})
     
@@ -40,20 +36,15 @@ class MovieRows extends Component{
     throw error
     }
     
-}
-componentWillUpdate(){
-  this.performSearch()
+  }
+  componentWillUpdate(){
+    this.performSearch() 
+  }
   
-}
-  
-
-  render() {
-    
+  render() { 
     return (
     <div className="App">
-
       {this.state.rows}
-    
     </div>
     )
   }

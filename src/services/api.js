@@ -1,8 +1,5 @@
 import axios from 'axios'
-
 import { api_key, BASE_URL, TV_URL } from '../config/api_config'
-
-
 export const getMovies = async (movieName) => {
   const url = BASE_URL
   
@@ -22,16 +19,12 @@ export const getMovies = async (movieName) => {
       //  console.log("result",result)
       // return response.data.result
       //return movie;
-      
-      
     //})
     
   } catch (error) {
     throw error
   }
 }
-
-
 export const getTvShows = async (showName) => {
   const url = TV_URL
   try {

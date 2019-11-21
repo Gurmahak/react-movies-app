@@ -9,14 +9,15 @@ import Select from '@material-ui/core/Select';
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
-    marginTop:theme.spacing(9),
+    //marginTop:theme.spacing(9),
     minWidth: 120,
     width:'2in',
+
     
     
   },
   selectEmpty: {
-    marginTop: theme.spacing(2),
+   // marginTop: theme.spacing(2),
   
   },
 }));
@@ -48,15 +49,10 @@ const useStyles = makeStyles(theme => ({
         labelWidth={labelWidth}
         
       >
-        {/* <MenuItem value="">
-          <em></em>
-        </MenuItem> */}
-        <MenuItem value={'Movie'}>Movie</MenuItem>
-        <MenuItem value={'Multi'}>Multi</MenuItem>
-        <MenuItem value={'Tv'}>Tv</MenuItem>
+        <MenuItem value="movie">Movie</MenuItem>
+        <MenuItem value="multi">Multi</MenuItem>
+        <MenuItem value="tv">Tv</MenuItem>
       </Select>
     </FormControl>
-      
-    
   )
 }export default SimpleSelect

@@ -22,39 +22,32 @@ class TvRows extends Component{
     q: show
     }
     })
-    //console.log(response)
-    //return response.data.results
+    
     var tvRows = []
     response.data.results.forEach((show)=>{
     show.poster_src = "https://image.tmdb.org/t/p/w185" + show.poster_path
-    //console.log(movie.poster_path)
+    
     const showRow = <TvRow key={show.id} show={show} />
     tvRows.push(showRow)
-    //console.log("result",tvRows)
     
     })
     this.setState({rows:tvRows})
     } catch (error) {
     throw error
     }  
-}
-componentDidUpdate(){
-  this.performSearch()
-  
-}
-componentDidMount(){
-  this.performSearch()
-
-}
-
-
-  render() {
+  }
+  componentDidUpdate(){
+    this.performSearch()
     
+  }
+  componentDidMount(){
+  this.performSearch()
+
+  }
+  render() {   
     return (
     <div className="App">
-
       {this.state.rows}
-    
     </div>
     )
   }

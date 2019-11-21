@@ -11,11 +11,6 @@ import Box from '@material-ui/core/Box';
 import TvRow from './TvRow';
 import MovieList from './MovieList'
 
-
-
-
-
-
 function TabPanel(props) {
   const { children, value, index,  } = props;
 
@@ -26,7 +21,6 @@ function TabPanel(props) {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      
     >
       <Box p={3}>{children}</Box>
     </Typography>
@@ -53,13 +47,11 @@ const useStyles = makeStyles(theme => ({
     margin:'2%'
     
   },
-  
 }));
 
 export default function SimpleTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -83,7 +75,7 @@ export default function SimpleTabs() {
         <h3> MOVIES </h3>
         <Category/>
         
-        </TabPanel>
+      </TabPanel>
       <TabPanel value={value} index={1}>
         <h1>Please Enter A Search</h1>
         <MovieList/>
@@ -91,14 +83,11 @@ export default function SimpleTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h3>TV SHOWS</h3>
-        
-        
         <Category1/>
         <TvRow/>
         
       </TabPanel>
     </div>
   );
-  
 }
 
