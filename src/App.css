@@ -1,3 +1,76 @@
+#SearchContainer{
+  display: grid;
+  grid-gap: 20px;;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 50px;
+  height: 40px;
+
+
+
+}
+#searchReturn{
+  display: grid;
+  
+
+}
+#searchInput{
+  height: 45px;
+  width: 200px;
+  font-size: 1.35rem;
+  border: 1px solid gray;
+  margin-top: 72px;
+  justify-content: center;
+}
+.searchBtn{
+  background: blue;
+  height: 60px;
+  width: 150px;
+  font-size: 1.75rem;
+  color: white;
+  padding: 15px;
+  
+  margin-bottom: 40px;
+  
+ 
+  
+
+  
+
+}
+
+table{
+  
+  border-bottom: 5px solid black;
+  background-color: azure;
+  
+
+}
+table p{
+  margin: 0;
+  margin-left: 50px;
+}
+img{
+  margin: 50px;
+  
+}
+#SearchContainer button {
+  width:60%;
+  height:40px;
+  margin-top: 10px;;
+
+}
+#SearchContainer Select {
+  border: 2px solid black;
+
+}
+#searchSelector{
+  border:1px solid gray;
+  
+  
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -7,16 +80,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color:white;
+  min-height: 7vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  border: 5px solid black;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  
 }
 
 .App-link {
   color: #09d3ac;
 }
+
+
